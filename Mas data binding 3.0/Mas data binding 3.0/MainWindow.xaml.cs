@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Mas_Data_Binding
+namespace Mas_data_binding_3._0
 {
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
@@ -22,7 +22,7 @@ namespace Mas_Data_Binding
     {
         public MainWindow()
         {
-          
+            InitializeComponent();
         }
     }
 }

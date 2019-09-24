@@ -1,0 +1,21 @@
+﻿<Window x:Class="Mas_data_binding_3._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mas_data_binding_3._0"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <ComboBox Name="ComboBox" Margin="50" Width="100">
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Pink"/>
+        </ComboBox>
+        <TextBox Name="TextBox" Margin="50" Width="270" Height="25" VerticalAlignment="Top" 
+                 Text="{Binding ElementName=ComboBox, Path=SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                 Background="{Binding ElementName=ComboBox,Path=SelectedItem.Content}">
+        </TextBox>
+    </StackPanel>
+</Window>
